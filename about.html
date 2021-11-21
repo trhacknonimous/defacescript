@@ -1,0 +1,77 @@
+<?php
+   session_start();
+   require_once("koneksi.php");
+   $username = $_POST['username'];
+   $pass = $_POST['password'];
+   $query = $db->prepare("SELECT * FROM user WHERE username = ?");
+   $query->execute(array($username));
+   $hasil = $query->fetch();
+   if($query->rowCount() == 0) {
+     echo "<div align='center'>Username Belum Terdaftar! <a href='index.php'><button>Kembali</button></a></div>";
+   } else {
+     if($pass <> $hasil['password']) {
+       echo "<div align='center'>Password salah! <a href='index.php'>Back</a></div>";
+     } else {
+       $_SESSION['username'] = $hasil['username'];
+       header('location:dashboard.php');
+     }
+}
+?>
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width"initial-scale="1.0">
+
+    </head>
+<body>
+    <style>
+  
+      body
+      {
+          margin-top: 100px;
+          
+      }
+      a
+      {
+          text-decoration: none;
+          color: black;
+      }
+      
+      
+
+    </style>
+
+
+</body>
+
+
+
+</html>ter-spacing: 0;
+ padding: .25em 0 .325em;
+ display: block;
+ margin: 0 auto;
+   	text-shadow: 0 0 80px rgba(255,255,255,.5);
+background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+	  -webkit-backface-visibility: hidden;
+
+ }
+ @-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+</style>
+
+</head>
+
+<body>
+<p>
+ [!] Hacked By MNHBLOG [!]
+  <span>
+    # MAGELANG1337
+  </span>
+  &mdash; Your security is low &mdash;
+</p>
+
+</html>

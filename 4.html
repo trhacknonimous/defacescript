@@ -1,0 +1,235 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body{
+        background:url("https://i.postimg.cc/zXMc80XB/Posh-Green-Asiaticmouflon-size-restricted.gif");
+        background-size:cover;
+
+        font-family: "OCR A Std";
+
+    }
+    .middle{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .text{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 100px;
+        text-align: center;
+        letter-spacing: 10px;
+    }
+
+    .text::before,.text::after{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .text::before{
+        color: #ff0022;
+        animation: glitch-effect 3s infinite;
+    }
+    .text::before{
+        color: #00ff50;
+        animation: glitch-effect 4s infinite;
+    }
+
+        .text::after{
+        color: #003edb;
+        animation: glitch-effect 2s infinite;
+    }
+
+    @keyframes glitch-effect {
+        0%{
+            left: -2px;
+            top: -2px;
+        }
+        25%{
+            left: 2px;
+            top: 0px;
+        }
+        50%{
+            left: -1px;
+            top: 2px;
+        }
+        75%{
+            left: 1px;
+            top: -1px;
+        }
+        100%{
+            left: 0px;
+            top: -2px;
+        }
+    }
+
+    .container {
+        text-align: center;
+    }
+    .container h1{
+        text-align: center;
+        font-family: "OCR A Std";
+        font-size: 200%;
+        color: white;
+    }
+    .container img{
+        position: relative;
+        height: 450px;
+    }
+
+    .greetings{
+        text-align: center;
+        color:white;
+    }
+	
+</style>
+<script type="text/javascript">
+    var rev = "silent";
+    function titlebar(val)
+    {
+        var msg  = "HACKED BY ANONYMOUS YOUR NAME";
+        var res = " ";
+        var speed = 70
+        var pos = val;
+
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "silent"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else{
+                rev = "silents";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else{
+            if(pos > 0){
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else{
+                rev = "silent";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+
+    titlebar(0);
+    </script>
+<script type="text/javascript">
+    function disableselect(e) {
+        return false
+    }
+    function reEnable() {
+        return true
+    }
+    document.onselectstart = new Function("return false")
+    if (window.sidebar) {
+        document.onmousedown = disableselect
+        document.onclick = reEnable
+    }
+    var message = "";
+    function clickIE() {
+        if (document.all) {
+            (message);
+            return false;
+        }
+    }
+    function clickNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2 || e.which == 3) {
+                (message);
+                return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS;
+    } else {
+        document.onmouseup = clickNS;
+        document.oncontextmenu = clickIE;
+    }
+    document.oncontextmenu = new Function('alert("STOP SCAMMING PEOPLE!"); return false')
+</script>
+<script language="JavaScript">
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+    }
+    document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                alert("YOU CAN'T DO THAT RIGHT NOW");
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                alert("YOU CAN'T DO THAT RIGHT NOW");
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                alert("YOU CAN'T DO THAT RIGHT NOW");
+                return false;
+            }
+        }
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>FSecurity</title>
+	<meta name="viewport" content="width=device-height, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, user-scalable=0">
+    <meta name="Author" content="YOUR NAME">
+    <meta name="keywords" content="Hacked, Touched, Leaked, Pawned, Deface, Website Deface, Defacement" />
+    <meta name="copyright"    content="YOUR NAME"/>
+    <meta name="description"  content="HACKED BY YOUR NAME"/>
+    <meta property="og:image" content="https://i.postimg.cc/TwmbRxj3/LOGOBG.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/pX0tTrRp/logo1.png">
+    <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel = "icon"  type = "image/png" href = "https://i.postimg.cc/ZqtLnQdf/black2.png">
+</head>
+<body onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
+<div class="container">
+    <h1> HACKED BY YOUR NAME</h1>
+    <img class="logo" src="https://i.postimg.cc/pX0tTrRp/logo1.png" />
+</div>
+<div class="greetings" data-text="GREETINGS MAINSOURCETECHSOL! STOP SCAMMING PEOPLE!">
+    <H1>#FREEPALESTINE</H1>
+	<h2>WE ARE WATCHING YOU!</h2>
+  <h2>PLEASE STOP ATTACKING PALESTINE</h2>
+   
+</div>
+</body>
+</html>

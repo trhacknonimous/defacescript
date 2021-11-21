@@ -1,0 +1,148 @@
+<html>
+ <head>
+ 	<title>Owned By Itsmerb</title>
+ <body bgcolor="black">
+ <link href="https://fonts.googleapis.com/css?family=Mali:400i,700i" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/x-icon" href="https://a.top4top.io/p_2060rcfug0.jpg">
+	<meta charset="utf-8">
+	<meta name="keywords" content="STRES NGENTOOD">
+	<meta name="description" content="SECURE SYSTEM">
+		<style>
+			h1{
+		margin-top: 0%;
+		font-family: "Mali";
+        font-size: 2em;
+    	font-weight: bold;
+    	margin-bottom: 10%;
+	}
+	</style>
+	<center>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<img src="https://e.top4top.io/p_2070xmvb11.jpg" width="750">
+	<h1><font color="red">[ L O C A L  H E A R T ]</font><font color="white"><br>"Silent Is Better Than Bullshit."</font><br>
+	<font color="white"><font face="Julee"><br> <style type="text/css"> .lagu{ background:transparent; border:3px solid white; text-shadow:0px 0px 5px blue; border-radius:13px; font-family:Share Tech Mono; color:blue; font-size:18x; font-weight:bold; padding:3px 29px; text-decoration:none; text-shadow:0px 0px 20px red; } </style> 
+     <audio id="lagu" src="https://b.top4top.io/m_2082nhz3c0.mp3"></audio> <button class="lagu" onclick="play();liat();"><font face="Orbitron" size="5" color="White">PLAY</font></button>&nbsp;&nbsp;<button class="lagu" onclick="pause(); liat();"><font face="Orbitron" size="5" color="white">PAUSE</font></button> 
+     <audio id="lagu" src="https://b.top4top.io/m_2082nhz3c0.mp3"></audio> <br><br><font face="Happy Monkey"><font color="white" size="></font><font color="red"></font><br></font></font></font>
+	</center></h1>
+	</body>
+	</html>
+be/EX6rYPtj2GE"
+frameborder="0" allowfullscreen></iframe>
+
+  <h1>
+    <center>
+     <font color="red">❌Hacked❌</font>
+     <br>
+     <font color="blue">By</font>
+     <br>
+     <font color="Ruby Red">Tobi</font>
+    <br>
+     <img src="https://media.tenor.com/images/9bcb278855e20b86103b14defcf0f5c2/tenor.gif" width="240×120px"> 
+     <p style="color:yellow;">And</p>
+   <p style="color:yellow;" >Lin Htet Aung(Sor Pyit Kaung)</p>
+   <p style="color:yellow;" >Zin Min Htet(Legendary Cow)</p>
+   <p style="color:yellow;" >Phyo Thiha(Sor Kyut Kaung)</p>
+   <p style="color:yellow;" >Nan Yati Win(Chee Pay Hacker Ma)</p>
+   <p style="color:yellow;" >Htet Myat Tun and Khant Sis Thway(Idiots)</p>
+ <p style="color:Cyan;" >I am Sout Chaw Gyi.(Single)</p>
+ <br>
+   <p style="color:Red;" >🖕🖕Fuck You Min Aung Hlaing🖕🖕</p>
+  
+    </center></h1>
+    <center>
+   <br>
+   <h2><marquee><p style="color:gray;"><i>Hacked by Cyber-Crack(D4RK-D3V1L)</i></p></marquee></h2>
+   </center>
+   <canvas></canvas> 
+  <script>
+//To check if object is an array
+var $isArray = function (obj) {
+    return Object.prototype.toString.call(obj) === '[object Array]';
+};
+//Loop on each element of map or array
+var $each = function (obj, callback) {
+    if ($isArray(obj)) {
+        for (var idx = 0, len = obj.length; idx < len; idx++) {
+            callback(obj[idx], idx);
+        }
+    } else {
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                callback(obj[key], key);
+            }
+        }
+    }
+};
+//Simple Inheritance
+var Extend = function (Child, Parent, prototypes) {
+    Child.prototype = new Parent();
+    Child.prototype.constructor = Parent;
+    $each(prototypes, function (value, key) {
+        Child.prototype[key] = value;
+    })
+};
+
+var Utils = {
+    /**
+     * gets random between 2 numbers
+     * @param start
+     * @param end
+     * @return {Number}
+     */
+    getRandom: function (start, end) {
+        return Math.floor(Math.random() * (end - start + 1) + start);
+    },
+    /**
+     * Cross browser addListener
+     */
+    addListener: function (dom, event, callback) {
+        if (!dom) return;
+        if (event === "transitionEnd") { //TODO detect browser and act accordingly
+            Utils.addListener(dom, "transitionend", callback);
+            Utils.addListener(dom, "oTransitionEnd", callback);
+            Utils.addListener(dom, "webkitTransitionEnd", callback);
+            return;
+        }
+        if (dom.attachEvent) {
+            dom.attachEvent('on' + event, callback);
+        } else {
+            dom.addEventListener(event, callback, false); //no capture
+        }
+    },
+    /**
+     *Cross browser removeListener
+     */
+    removeListener: function (dom, event, callback) {
+        if (!dom) return;
+        if (event === "transitionEnd") { //TODO detect browser and act accordingly
+            Utils.removeListener(dom, "transitionend", callback);
+            Utils.removeListener(dom, "oTransitionEnd", callback);
+            Utils.removeListener(dom, "webkitTransitionEnd", callback);
+            return;
+        }
+        if (dom.detachEvent) {
+            dom.detachEvent('on' + event, callback);
+        } else {
+            dom.removeEventListener(event, callback);
+        }
+    },
+    /**
+     * Gets random hex color
+     * @return {String}
+     */
+    getRandomColor: function () {
+        return '#'+Math.floor(Math.random()*16777215).toString(16);
+    },
+    /**
+     * Apply CSS style on the dom
+     * @param dom
+     * @param style
+     */
+    applyStyle: function (dom, style) {
+        for (var prop in style) {
+            if (prop === "transform") {
+                dom.style.webkitTransform = style[prop];
+                dom.style.MozTransform = style[prop];
+                dom.style.msTransform = style[prop];
+                dom.style.OTransform = style[prop];
+                "

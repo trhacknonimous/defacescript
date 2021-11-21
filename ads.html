@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 3D Nike Product Card With Hover Effect</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+<style>
+@import url("http://fonts.cdnfonts.com/css/gill-sans-mt-condensed");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(236, 97, 5);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 600px;
+  position: relative;
+}
+
+.container::before {
+  position: absolute;
+  content: "";
+  background-color: #fae713;
+  height: 200px;
+  width: 200px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.container::after {
+  position: absolute;
+  content: "";
+  background-color: #ff00ba;
+  height: 200px;
+  width: 200px;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.card {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  height: 500px;
+  width: 300px;
+  background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.card::after {
+  position: absolute;
+  content: "Nike";
+  height: max-content;
+  width: 300px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  font-size: 100px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.267);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.card .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 35%;
+}
+.card .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 90%;
+  height: 65%;
+  padding: 20px 20px;
+  margin: 20px 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 50px 0 rgb(51 51 51 / 30%);
+  transform: translateZ(30px);
+  transition: 0.5s;
+}
+
+.card .image img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.card:hover .info {
+  transform: translateZ(60px);
+  transition: 0.5s;
+}
+.card:hover .image img {
+  transform: translateZ(60px);
+  transition: 0.5s;
+}
+
+.card:hover .info p {
+  font-size: 12px;
+}
+.color-choose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+.color-choose span {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.color-choose span.selected::after {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: 1px solid red;
+  z-index: -1;
+  border-radius: 50%;
+}
+.color-choose span:nth-child(1) {
+  background-color: rgb(34, 48, 96);
+}
+
+.color-choose span:nth-child(2) {
+  background-color: rgb(255, 123, 0);
+}
+
+.color-choose span:nth-child(3) {
+  background-color: rgb(94, 255, 0);
+}
+
+.color-choose span:nth-child(4) {
+  background-color: rgb(0, 0, 0);
+}
+
+.color-choose span:nth-child(5) {
+  background-color: rgb(251, 255, 0);
+}
+
+.color-choose span:nth-child(6) {
+  background-color: rgb(255, 0, 200);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+.price input {
+  outline: 0;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+  font-size: large;
+  cursor: pointer;
+  color: white;
+}
+.price sup {
+  font-size: 11px;
+  animation: 0.5s color linear infinite;
+}
+.size select {
+  outline: 0;
+  border: 0;
+  padding: 2px 20px;
+  border-radius: 4px;
+  background: #ff00ba;
+  background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+  color: white;
+}
+
+.size select option {
+  margin: 0 10px;
+  border: 1px solid red;
+}
+
+@keyframes color {
+  from {
+    color: rgb(20, 172, 0);
+  }
+  to {
+    color: black;
+  }
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+        <div class="card">
+            <div class="image"> <img
+                    src="https://res.cloudinary.com/detcorvmf/image/upload/v1630526317/kisspng-basketball-shoe-nike-sneakers-air-jordan-nike-kyrie-2-sneaker-sneaks-up-5b8f7311eb1535.8231585415361277619629_jje8ef.png"
+                    alt=""></div>
+            <div class="info">
+                <h1>Nike Kyrie</h1>
+                <p>Basketball shoe nike sneakers air jordan nike kyrie...</p>
+                <span>Choose a color</span>
+
+                <div class="color-choose">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="size">
+                    <select name="size" id="size">
+                        <option value="">SIZE</option>
+                        <option value="6">6</option>
+                        <option value="6.5">6.5</option>
+                        <option value="7">7</option>
+                        <option value="7.5">7.5</option>
+                        <option value="8">8</option>
+                        <option value="8.5">8.5</option>
+                        <option value="8">9</option>
+                        <option value="10">10</option>
+                        <option value="10.5">10.5</option>
+                        <option value="11">11</option>
+                        <option value="11.5">11.5</option>
+                        <option value="12">12</option>
+                        <option value="12.5">12.5</option>
+                        <option value="13">13</option>
+                        <option value="13.5">13.5</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+                <div class="price">
+                    <h2><small>€</small> 190 <sup>-50%</sup></h3>
+                        <input type="button" class="buy-btn" value="Buy now">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.1/vanilla-tilt.min.js'></script>
+  <script>
+  //VANILLATILT
+VanillaTilt.init(document.querySelector(".card"), {
+  max: 18,
+  speed: 400,
+});
+
+//FOR COLORS CHOOSE
+var colors = document.querySelectorAll(".color-choose span");
+
+for (let i = 0; i < colors.length; i++) {
+  colors[i].onclick = function () {
+    for (let j = 0; j < colors.length; j++) {
+      if (colors[j] != this) {
+        colors[j].classList.remove("selected");
+      }
+    }
+    this.classList.toggle("selected");
+  };
+}
+  </script>
+
+</body>
+</html>
